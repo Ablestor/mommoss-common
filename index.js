@@ -1,4 +1,4 @@
-import Types from "./types";
-import ErrorCode from "./error_code";
+const Types = require("./types");
+const ErrorCode = require("./error_code");
 
-export default { Types, ErrorCode };
+exports.default = { Types, ErrorCode };

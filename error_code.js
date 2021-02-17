@@ -1,4 +1,4 @@
-export default {
+exports.default = {
   UNDEFINED_ERROR: {
     code: 1,
     status: "UNDEFINED_ERROR",
