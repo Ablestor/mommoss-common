@@ -1,182 +1,232 @@
 return {
-  1: {
-    text: "정의되지 않은 오류입니다.",
-    reason: "UNDEFINED_ERROR",
+  UNDEFINED_ERROR: {
+    code: 1,
+    status: "UNDEFINED_ERROR",
+    reason: "정의되지 않은 오류입니다.",
   },
-  2: {
-    text: "기기에 저장된 로그인 정보가 만료되었습니다",
-    reason: "JWT_TOKEN_ERROR",
+  JWT_TOKEN_ERROR: {
+    code: 2,
+    status: "JWT_TOKEN_ERROR",
+    reason: "기기에 저장된 로그인 정보가 만료되었습니다",
   },
-  3: {
-    text: "전달된 파라미터 중 잘못된 항목이있습니다.",
-    reason: "INVALID_INPUT",
+  INVALID_PARAMETER: {
+    code: 3,
+    status: "INVALID_PARAMETER",
+    reason: "전달된 파라미터 중 잘못된 항목이있습니다.",
   },
-  4: {
-    text: "이미 검증된 아이디입니다.",
-    reason: "INVALID_INPUT",
+  ALREADY_VERIFY_ID: {
+    code: 4,
+    status: "ALREADY_VERIFY_ID",
+    reason: "이미 인증된 아이디입니다.",
   },
-  5: {
-    text: "검증 코드가 잘못되었습니다.",
-    reason: "INVALID_INPUT",
+  INVALID_VERIFY_CODE: {
+    code: 5,
+    status: "INVALID_VERIFY_CODE",
+    reason: "인증 코드가 잘못되었습니다.",
   },
-  6: {
-    text: "검증 코드가 만료되었습니다.",
-    reason: "EXPIRED_CODE",
+  EXPIRED_VERIFY_CODE: {
+    code: 6,
+    status: "EXPIRED_VERIFY_CODE",
+    reason: "인증 코드가 만료되었습니다.",
   },
-  7: {
-    text: "닉네임은 한글, 영문, 숫자 2~12글자여야 합니다.",
-    reason: "INVALID_INPUT",
+  INVALID_NICKNAME: {
+    code: 7,
+    status: "INVALID_NICKNAME",
+    reason: "닉네임은 한글, 영문, 숫자 2~12글자여야 합니다.",
   },
-  8: {
-    text: "이름은 한글, 영문 2~12글자여야 합니다.",
-    reason: "INVALID_INPUT",
+  INVALID_NAME: {
+    code: 8,
+    status: "INVALID_NICKNAME",
+    reason: "이름은 한글, 영문 2~12글자여야 합니다.",
   },
-  9: {
-    text: "입력된 이메일이 이미 존재합니다.",
-    reason: "INVALID_INPUT",
+  ALREADY_USED_EMAIL: {
+    code: 9,
+    status: "ALREADY_USED_EMAIL",
+    reason: "입력된 이메일이 이미 존재합니다.",
   },
-  10: {
-    text: "아이디 혹은 패스워드가 틀렸습니다.",
-    reason: "INVALID_INPUT",
+  INVALID_ACCOUNT: {
+    code: 10,
+    status: "INVALID_ACCOUNT",
+    reason: "아이디 혹은 패스워드가 틀렸습니다.",
   },
-  11: {
-    text: "아직 검증이되지 않은 아이디입니다.",
-    reason: "INVALID_INPUT",
+  UNVERIFIED_ACCOUNT: {
+    code: 11,
+    status: "UNVERIFIED_ACCOUNT",
+    reason: "아직 인증 되지 않은 계정입니다.",
   },
-  12: {
-    text: "토큰 검증에 실패했습니다.",
-    reason: "INVALID_INPUT",
+  INVALID_TOKEN: {
+    code: 12,
+    status: "INVALID_TOKEN",
+    reason: "토큰 검증에 실패했습니다.",
   },
-  13: {
-    text: "데이터가 없습니다.",
-    reason: "NONE_DATA",
+  DATA_NOT_FOUND: {
+    code: 13,
+    status: "DATA_NOT_FOUND",
+    reason: "데이터를 찾을 수 없습니다.",
   },
-  14: {
-    text: "입력된 번호가 이미 존재합니다.",
-    reason: "INVALID_INPUT",
+  ALREADY_USE_PHONENUMBER: {
+    code: 14,
+    status: "ALREADY_USED_PHONENUMBER",
+    reason: "입력된 번호가 이미 존재합니다.",
   },
-  15: {
-    text: "입력된 닉네임이 이미 존재합니다.",
-    reason: "INVALID_INPUT",
+  ALREADY_USE_NICKNAME: {
+    code: 15,
+    status: "ALREADY_USED_NICKNAME",
+    reason: "입력된 닉네임이 이미 존재합니다.",
   },
-  16: {
-    text: "그룹안에 멤버가 존재하지 않습니다.",
-    reason: "INVALID_INPUT",
+  NOT_EXISTS_MEMBER: {
+    code: 16,
+    status: "NOT_EXISTS_MEMBER",
+    reason: "그룹안에 멤버가 존재하지 않습니다.",
   },
-  17: {
-    text: "변경할 권한이 없습니다.",
-    reason: "INVALID_INPUT",
+  PERMISSION_DENIED: {
+    code: 17,
+    status: "PERMISSION_DENIED",
+    reason: "추가하거나 변경할 권한이 없습니다.",
   },
-  18: {
-    text: "그룹의 자식이 존재할경우 삭제가 불가능합니다.",
-    reason: "INVALID_INPUT",
+  UNREMOVABLE_GROUP: {
+    code: 18,
+    status: "UNREMOVABLE_GROUP",
+    reason: "하위 그룹이 있어 이 그룹을 삭제할 수 없습니다.",
   },
-  19: {
-    text: "초대 링크가 만료되었습니다.",
-    reason: "EXPIRED_LINK",
+  EXPIRED_LINK: {
+    code: 19,
+    status: "EXPIRED_LINK",
+    reason: "초대 링크가 만료되었습니다.",
   },
-  20: {
-    text: "그룹의 조상이 각기 다릅니다.",
-    reason: "INVALID_INPUT",
+  MISMATCH_PARENT_GROUP: {
+    code: 20,
+    status: "MISMATCH_PARENT_GROUP",
+    reason: "상위 그룹이 다릅니다.",
   },
-  21: {
-    text: "선택된 유저정보가 없습니다.",
-    reason: "INVALID_INPUT",
+  INVALID_USER_DATA: {
+    code: 21,
+    status: "INVALID_USER_DATA",
+    reason: "선택된 유저정보가 없습니다.",
   },
-  22: {
-    text: "기본 권한은 삭제할 수 없습니다.(관리자, 준회원).",
-    reason: "INVALID_INPUT",
+  UNREMOVABLE_PERMISSION: {
+    code: 22,
+    status: "UNREMOVABLE_PERMISSION",
+    reason: "기본 권한은 삭제할 수 없습니다. (관리자, 준회원)",
   },
-  23: {
-    text: "부여된 권한을 가진 아이디가 있습니다.",
-    reason: "INVALID_INPUT",
+  HAS_ALREADY_USE_PERMISSION: {
+    code: 23,
+    status: "ALREADY_USE_PERMISSION",
+    reason: "부여된 권한을 가진 아이디가 있습니다.",
   },
-  24: {
-    text: "그룹타입이 다릅니다.",
-    reason: "INVALID_INPUT",
+  INVALID_GROUP_TYPE: {
+    code: 24,
+    status: "INVALID_GROUP_TYPE",
+    reason: "그룹타입이 다릅니다.",
   },
-  25: {
-    text: "관리자만 허용되는 기능입니다.",
-    reason: "INVALID_INPUT",
+  USER_IS_NOT_ADMIN: {
+    code: 25,
+    status: "INVALID_GROUP_TYPE",
+    reason: "관리자만 허용되는 기능입니다.",
   },
-  26: {
-    text: "설문조사 수정이 불가능하게 설정되었습니다.",
-    reason: "INVALID_INPUT",
+  UNEDITABLE_SURVEY: {
+    code: 26,
+    status: "UNEDITABLE_SURVEY",
+    reason: "설문조사를 수정할 수 없습니다.",
   },
-  27: {
-    text: "설문조사 기간이 아닙니다.",
-    reason: "DONE ON DATE",
+  OUT_OF_DATE_SURVEY: {
+    code: 27,
+    status: "OUT_OF_DATE_SURVEY",
+    reason: "설문조사 기간이 아닙니다.",
   },
-  28: {
-    text: "최대 참여 숫자를 넘었습니다.",
-    reason: "OVER COUNT",
+  OUT_OF_MAX_PARTICIPATE_COUNT_SURVEY: {
+    code: 28,
+    status: "OUT_OF_DATE_SURVEY",
+    reason: "최대 참여 숫자를 넘었습니다.",
   },
-  29: {
-    text: "세무사회 서버에 있는 정보를 확인하지 못했습니다.",
-    reason: "NOT_FOUND_ON_KACPTA_SERVER",
+  OUT_OF_MAX_PARTICIPATE_COUNT_SURVEY: {
+    code: 28,
+    status: "OUT_OF_DATE_SURVEY",
+    reason: "최대 참여 숫자를 넘었습니다.",
   },
-  30: {
-    text: "올바른 핸드폰 번호가 아닙니다.",
-    reason: "NOT_CORRECT_HP",
+  ERROR_ON_KACPTA_SERVER: {
+    code: 29,
+    status: "ERROR_ON_KACPTA_SERVER",
+    reason: "세무사회 서버에 있는 정보를 확인하지 못했습니다.",
   },
-  31: {
-    text: "등록된 세무사 번호와 매칭된 사업자 번호가 존재하지 않습니다.",
-    reason: "NOT_CORRECT_HP",
+  INVALID_HP: {
+    code: 30,
+    status: "INVALID_HP",
+    reason: "올바른 핸드폰 번호가 아닙니다.",
   },
-  32: {
-    text: "한길 팩스 서비스 미신청 고객입니다.",
-    reason: "HANGIL_FAX",
+  NOT_FOUND_BIZNUM: {
+    code: 31,
+    status: "NOT_FOUND_BIZNUM",
+    reason: "등록된 세무사 번호로 조회된 사업자 번호가 존재하지 않습니다.",
   },
-  33: {
-    text: "한길 팩스 데이터 로딩중 오류가 발생했습니다.",
-    reason: "HANGIL_FAX",
+  UNREGISTER_HANGIL_FAX: {
+    code: 32,
+    status: "UNREGISTER_HANGIL_FAX",
+    reason: "한길 팩스 서비스 미신청 고객입니다.",
   },
-  34: {
-    text: "한길 팩스 데이터가 만료되었습니다 다시 열어주세요.",
-    reason: "HANGIL_FAX",
+  ERROR_ON_HANGIL_FAX: {
+    code: 33,
+    status: "ERROR_ON_HANGIL_FAX",
+    reason: "한길 팩스 데이터 로딩중 오류가 발생했습니다.",
   },
-  35: {
-    text: "틀린 문구입니다.",
-    reason: "WITHDRAWAL",
+  EXPIRED_HANGIL_FAX_DATA: {
+    code: 34,
+    status: "EXPIRED_HANGIL_FAX_DATA",
+    reason: "한길 팩스 데이터가 만료되었습니다. 다시 요청해주세요.",
   },
-  36: {
-    text: "기기변경을 감지했습니다. 본인 계정인증이 필요합니다.",
-    reason: "WITHDRAWAL",
+  MISMATCH_WITHDRAWAL_STRING: {
+    code: 35,
+    status: "MISMATCH_WITHDRAWAL_STRING",
+    reason: "탈퇴를 위한 문구를 정확히 입력해주세요.",
   },
-  37: {
-    text: "한길TIS에서 정보를 확인하지 못했습니다.",
-    reason: "HANGIL_DOES_NOT_MATCH",
+  WITHDRAWAL: {
+    code: 36,
+    status: "WITHDRAWAL",
+    reason: "이미 탈퇴한 계정입니다.",
   },
-  38: {
-    text: "사용 중인 한길백업서비스 ID가 존재하지 않습니다",
-    reason: "HANGIL_DOES_NOT_MATCH",
+  ERROR_ON_HANGIL_SERVER: {
+    code: 37,
+    status: "ERROR_ON_HANGIL_SERVER",
+    reason: "한길TIS에서 정보를 확인하지 못했습니다.",
   },
-  39: {
-    text: "한길백업서비스 미이용 고객입니다",
-    reason: "HANGIL_DOES_NOT_MATCH",
+  NOT_FOUND_HANGIL_ACCOUNT: {
+    code: 38,
+    status: "NOT_FOUND_HANGIL_ACCOUNT",
+    reason: "사용 중인 한길 백업 서비스 ID가 존재하지 않습니다.",
   },
-  40: {
-    text: "한길 베스트빌 미이용 고객입니다",
-    reason: "HANGIL_DOES_NOT_MATCH",
+  UNREGISTER_HANGIL_BACKUP: {
+    code: 39,
+    status: "UNREGISTER_HANGIL_BACKUP",
+    reason: "사용 중인 한길 백업 서비스 ID가 존재하지 않습니다.",
   },
-  41: {
-    text: "나이스 신용평가에서 데이터를 가져오지 못했습니다.",
-    reason: "NICE_CANT_GET_DATA",
+  UNREGISTER_HANGIL_BESTBILL: {
+    code: 40,
+    status: "UNREGISTER_HANGIL_BESTBILL",
+    reason: "사용 중인 한길 백업 서비스 ID가 존재하지 않습니다.",
   },
-  42: {
-    text: "이미 결재되었습니다.",
-    reason: "ALREADY_SIGNED",
+  NOT_FOUND_NICE: {
+    code: 41,
+    status: "UNREGISTER_HANGIL_BESTBILL",
+    reason: "사용 중인 한길 백업 서비스 ID가 존재하지 않습니다.",
   },
-  43: {
-    text: "만든 사람과 다른 아이디 입니다.",
-    reason: "ALREADY_SIGNED",
+  ALREADY_SIGNED: {
+    code: 42,
+    status: "ALREADY_SIGNED",
+    reason: "이미 결재되었습니다.",
   },
-  44: {
-    text: "관리자 멤버는 한명 이상 존재해야합니다. 그룹 삭제를 이용해주세요.",
-    reason: "ALREADY_SIGNED",
+  MISSMATCH_DRAFTER: {
+    code: 43,
+    status: "MISSMATCH_DRAFTER",
+    reason: "기안자가 다릅니다.",
   },
-  45: {
-    text: "생성한 그룹을 모두 삭제 후 시도해주세요.",
-    reason: "ALREADY_SIGNED",
+  REQUIRE_GROUP_ADMIN: {
+    code: 44,
+    status: "REQUIRE_GROUP_ADMIN",
+    reason: "관리자 멤버는 한명 이상 존재해야합니다. 그룹 삭제를 이용해주세요.",
+  },
+  HAS_GROUP: {
+    code: 45,
+    status: "HAS_GROUP",
+    reason: "아직 가입된 그룹이 있습니다.",
   },
 };
