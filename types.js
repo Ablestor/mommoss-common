@@ -1,5 +1,5 @@
 return {
-  messageGroupType: {
+  MessageGroupType: {
     NORMAL_GROUP: 0,
     PRIVATE_CHANNEL: 1,
     PUBLIC_CHANNEL: 2,
@@ -7,16 +7,16 @@ return {
     NOTE_GROUP: 4,
     CUSTOMER_GROUP: 5,
   },
-  cmsGroupType: {
+  CMSGroupType: {
     FIRST: 0,
     PRIVATE: 1,
     NORMAL: 2,
   },
-  cmsGroupMemberType: {
+  CMSGroupMemberType: {
     NORMAL: 0,
     CUSTOMER: 1,
   },
-  cmsGroupTeamType: {
+  CMSGroupTeamType: {
     NORMAL: 0,
   },
   messageType: {
@@ -26,11 +26,11 @@ return {
     TEXT: "text",
     MEDIA: "media",
   },
-  pushType: {
+  PushType: {
     TOTAL: 1,
     PARTIAL: 2,
   },
-  userType: {
+  UserType: {
     TAX_ACCOUNTANT: 101,
     TAX_ASSOCIATE: 104,
     NATIONAL_TAX_ACCOUNTANT: 105,
@@ -41,7 +41,7 @@ return {
     PRE_CUSTOMER_USER: 304,
     CUSTOMER_USER: 305,
   },
-  documentSignStatus: {
+  DocumentSignStatus: {
     CC: 0,
     REQUIRE_SIGN: 1,
     COMPLETE_SIGN: 2,
@@ -49,7 +49,7 @@ return {
     WAIT_SIGN: 4,
     REJECT_BEFORE_SIGN: 5,
   },
-  documentType: {
+  DocumentType: {
     TEMP: 0,
     SIGN: 1,
     CONTRACT: 2,
