@@ -1,4 +1,4 @@
-return {
+export default {
   MessageGroupType: {
     NORMAL_GROUP: 0,
     PRIVATE_CHANNEL: 1,
